@@ -1,5 +1,6 @@
 import React from 'react';
 import Day from './Date';
+import styles from './Week.module.scss';
 import {getDate, setDate, parse} from 'date-fns';
 
 function Week(props) {
@@ -15,7 +16,7 @@ function Week(props) {
         return days;
     }
     return (
-        <ul>{getWeek()}</ul>
+        <ul className={styles.row}>{getWeek()}</ul>
     );
 }
 

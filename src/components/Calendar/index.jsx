@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Day from './Day';
 import Month from './Month';
+import styles from './Calendar.module.scss';
 import {format} from 'date-fns';
 
 class Calendar extends Component {
@@ -21,7 +22,7 @@ class Calendar extends Component {
         }
         const year = format(currentDate, 'yyyy');
         return (
-            <article>
+            <article className={styles.calendar}>
                 <Day dayName={dayName} number={currentDay}/>
                 <Month month={month} year={year} currentDate={currentDate}/>
             </article>

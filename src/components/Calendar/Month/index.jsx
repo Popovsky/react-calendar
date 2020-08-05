@@ -1,7 +1,8 @@
 import React from 'react';
 import Week from './Week';
-import styles from './Month.module.css';
+import styles from './Month.module.scss';
 import {getWeek, getWeeksInMonth} from 'date-fns';
+import classNames from 'classnames';
 
 function Month(props) {
     const {month: {name, number}, year, currentDate} = props;
@@ -14,21 +15,20 @@ function Month(props) {
         }
         return weeks;
     }
+    const className = classNames(styles.box, styles.dayName)
     return (
-        <div>
-            <div>{name} {year}</div>
-            <ul>
-                <li className={styles.dayName}>s</li>
-                <li className={styles.dayName}>m</li>
-                <li className={styles.dayName}>t</li>
-                <li className={styles.dayName}>w</li>
-                <li className={styles.dayName}>t</li>
-                <li className={styles.dayName}>f</li>
-                <li className={styles.dayName}>s</li>
+        <div className={styles.wrapper}>
+            <div className={styles.title}>{name} {year}</div>
+            <ul className={styles.row}>
+                <li className={className}>s</li>
+                <li className={className}>m</li>
+                <li className={className}>t</li>
+                <li className={className}>w</li>
+                <li className={className}>t</li>
+                <li className={className}>f</li>
+                <li className={className}>s</li>
             </ul>
-            <div>
-                {getWeeks()}
-            </div>
+            {getWeeks()}
         </div>
     );
 }

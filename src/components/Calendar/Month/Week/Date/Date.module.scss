@@ -1,0 +1,20 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    font-weight: bold;
+    color: silver;
+}
+
+.today {
+    color: #eb1b57;
+    border: 0.3rem solid #eb1b57;
+}
+
+.otherMonth {
+    color: transparent;
+}

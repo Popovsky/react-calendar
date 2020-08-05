@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 5rem 0;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #009991;
+}
+
+.row {
+  display: flex;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  font-weight: bold;
+  color: silver;
+}
+
+.dayName {
+  text-transform: uppercase;
+  color: #eb1b57;
+}
