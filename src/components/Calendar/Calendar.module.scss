@@ -1,7 +1,11 @@
 .calendar {
-  display: flex;
-  max-width: 50rem;
-  margin: auto;
-  border: 1rem solid #009991;
-  background-color: white;
+    display: flex;
+    max-width: 50rem;
+    margin: auto;
+    border: 1rem solid #009991;
+    background-color: white;
+
+    & > * {
+        flex: 1;
+    }
 }

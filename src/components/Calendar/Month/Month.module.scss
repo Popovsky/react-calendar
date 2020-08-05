@@ -1,37 +1,29 @@
+@import "./../common";
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
 }
 
 .title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #009991;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #009991;
 }
 
 .row {
-  display: flex;
+    display: flex;
 }
 
 .box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.3rem;
-  border-radius: 50%;
-  font-weight: bold;
-  color: silver;
+    @extend %container;
 }
 
 .dayName {
-  text-transform: uppercase;
-  color: #eb1b57;
+    text-transform: uppercase;
+    color: #eb1b57;
 }
