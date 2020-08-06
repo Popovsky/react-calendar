@@ -1,22 +1,21 @@
 import React from 'react';
 import Day from './Date';
 import styles from './Week.module.scss';
-import {getDate, setDate, parse} from 'date-fns';
+import {getDate, setDate} from 'date-fns';
+
+const getWeek = ({currentDate, date}) => {
+    const days = [];
+    for (let i = 0; i < 7; i++) {
+        const singleDate = setDate(date, getDate(date) + i);
+        days.push(<Day key={singleDate} date={singleDate} currentDate={currentDate}/>);
+    }
+    return days;
+}
 
 function Week(props) {
-    const {currentDate, week, year} = props;
-    const getWeek = () => {
-        const start = parse(`${year} ${week}`, 'Y w', new Date());
-        const days = [];
-        for (let i = 0; i < 7; i++) {
-            const date = setDate(start, getDate(start));
-            days.push(<Day key={date} date={date} currentDate={currentDate}/>);
-            start.setDate(getDate(start) + 1);
-        }
-        return days;
-    }
+    const {currentDate, date} = props;
     return (
-        <ul className={styles.row}>{getWeek()}</ul>
+        <ul className={styles.row}>{getWeek({currentDate, date})}</ul>
     );
 }
 

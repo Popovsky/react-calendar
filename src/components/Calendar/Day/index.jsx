@@ -1,12 +1,13 @@
-import React from "react";
-import styles from "./Day.module.scss";
+import React from 'react';
+import styles from './Day.module.scss';
+import {getDate, format} from 'date-fns';
 
 function Day(props) {
-    const { dayName, number, className } = props;
+    const {date} = props;
     return (
         <div className={styles.wrapper}>
-            <div className={styles.name}>{dayName}</div>
-            <div className={styles.number}>{number}</div>
+            <div className={styles.name}>{format(date, 'iiii')}</div>
+            <div className={styles.number}>{getDate(date)}</div>
         </div>
     );
 }
