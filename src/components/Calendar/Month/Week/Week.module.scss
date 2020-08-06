@@ -1,5 +1,5 @@
-@import "./../../common";
+@import "./../../settings/common";
 
 .row {
-    @extend %row;
+    display: flex;
 }

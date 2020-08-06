@@ -1,11 +1,9 @@
-@import "common";
+@import "./settings/vars";
 
-.calendar {
+.container {
     display: flex;
-    max-width: 50rem;
+    max-width: $font-size-value * 50;
     margin: auto;
-    border: 1rem solid $dark-color;
-    background-color: $second-light-color;
 
     & > * {
         flex: 1;

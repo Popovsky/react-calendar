@@ -1,11 +1,14 @@
-@import "./../common";
+@import "./../settings/common";
+@import "./../settings/theme";
 
 .wrapper {
-    background-color: $light-color;
     @extend %wrapper;
-    font-weight: lighter;
-    text-transform: $uppercase;
-    color: $second-light-color;
+    background-color: $primary-light-color;
+    & > * {
+        font-weight: lighter;
+        text-transform: uppercase;
+        color: $secondary-light-color;
+    }
 }
 
 .name {
@@ -13,5 +16,5 @@
 }
 
 .number {
-    font-size: 15rem;
+    font-size: $font-size-value * 15;
 }

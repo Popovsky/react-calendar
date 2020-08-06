@@ -1,25 +1,29 @@
-@import "./../common";
+@import "./../settings/common";
+@import "./../settings/theme";
+
 .wrapper {
     @extend %wrapper;
     @extend %flex-center;
+    background-color: $secondary-light-color;
 }
 
 .title {
     @extend %title;
     font-weight: bold;
-    text-transform: $uppercase;
-    color: $dark-color;
+    text-transform: uppercase;
+    color: $primary-dark-color;
 }
 
 .row {
-    @extend %row;
+    display: flex;
 }
 
 .box {
     @extend %container;
+    @extend %flex-center;
 }
 
 .dayName {
-    text-transform: $uppercase;
+    text-transform: uppercase;
     color: $day-name-color;
 }

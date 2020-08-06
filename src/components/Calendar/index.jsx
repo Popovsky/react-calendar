@@ -14,7 +14,7 @@ class Calendar extends Component {
     render() {
         const {currentDate} = this.state;
         return (
-            <article className={styles.calendar}>
+            <article className={styles.container}>
                 <Day date={currentDate}/>
                 <Month date={currentDate}/>
             </article>

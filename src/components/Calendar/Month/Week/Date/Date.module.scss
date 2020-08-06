@@ -1,11 +1,14 @@
-@import "./../../../common";
+@import "./../../../settings/common";
+@import "./../../../settings/theme";
+
 .box {
     @extend %container;
+    @extend %flex-center;
 }
 
 .today {
     color: $day-name-color;
-    border: 0.3rem solid;
+    border: $font-size-value * 0.3 solid;
 }
 
 .otherMonth {
