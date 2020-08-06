@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Week from './Week';
 import styles from './Month.module.scss';
 import {getWeek, getWeeksInMonth, getYear, format, getMonth, parse} from 'date-fns';
@@ -33,6 +34,10 @@ function Month(props) {
             {getWeeks(date)}
         </div>
     );
+}
+
+Month.propTypes = {
+    date: PropTypes.instanceOf(Date).isRequired,
 }
 
 export default Month;

@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Date.module.scss';
 import {getDate, getMonth} from 'date-fns';
 import classNames from 'classnames';
 
-function Date(props) {
+function CalendarDate(props) {
     const {date, currentDate} = props;
     const today = getDate(currentDate);
     const currentMonth = getMonth(currentDate);
@@ -18,4 +19,9 @@ function Date(props) {
     return <li className={className}>{getDate(date)}</li>;
 }
 
-export default Date;
+CalendarDate.propTypes = {
+    date: PropTypes.instanceOf(Date).isRequired,
+    currentDate: PropTypes.instanceOf(Date).isRequired,
+}
+
+export default CalendarDate;
