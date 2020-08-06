@@ -1,11 +1,38 @@
+$day-name-color: #eb1b57;
+$light-color: #38cec4;
+$dark-color: #009991;
+$second-light-color: white;
+$uppercase: uppercase;
+
 %container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
+    $size: 3rem;
+    @extend %flex-center;
+    width: $size;
+    height: $size;
     font-size: 1.3rem;
     border-radius: 50%;
     font-weight: bold;
     color: silver;
+}
+
+%title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+%row {
+    display: flex;
 }

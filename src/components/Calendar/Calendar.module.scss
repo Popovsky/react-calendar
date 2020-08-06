@@ -1,9 +1,11 @@
+@import "common";
+
 .calendar {
     display: flex;
     max-width: 50rem;
     margin: auto;
-    border: 1rem solid #009991;
-    background-color: white;
+    border: 1rem solid $dark-color;
+    background-color: $second-light-color;
 
     & > * {
         flex: 1;

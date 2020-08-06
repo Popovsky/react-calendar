@@ -1,17 +1,15 @@
+@import "./../common";
+
 .wrapper {
-    background-color: #38cec4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5rem 0;
+    background-color: $light-color;
+    @extend %wrapper;
     font-weight: lighter;
-    text-transform: uppercase;
-    color: white;
+    text-transform: $uppercase;
+    color: $second-light-color;
 }
 
 .name {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    @extend %title;
 }
 
 .number {

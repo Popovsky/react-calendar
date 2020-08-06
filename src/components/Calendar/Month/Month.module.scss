@@ -1,22 +1,18 @@
 @import "./../common";
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5rem 0;
+    @extend %wrapper;
+    @extend %flex-center;
 }
 
 .title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    @extend %title;
     font-weight: bold;
-    text-transform: uppercase;
-    color: #009991;
+    text-transform: $uppercase;
+    color: $dark-color;
 }
 
 .row {
-    display: flex;
+    @extend %row;
 }
 
 .box {
@@ -24,6 +20,6 @@
 }
 
 .dayName {
-    text-transform: uppercase;
-    color: #eb1b57;
+    text-transform: $uppercase;
+    color: $day-name-color;
 }
