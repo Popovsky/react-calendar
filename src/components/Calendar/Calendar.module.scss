@@ -2,10 +2,13 @@
 
 .container {
     display: flex;
-    max-width: $font-size-value * 50;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    min-width: 320px;
     margin: auto;
 
     & > * {
         flex: 1;
+        min-width: inherit;
     }
 }
