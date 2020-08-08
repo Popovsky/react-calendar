@@ -15,7 +15,6 @@ const getWeeks = ({date, currentDate}) => {
         currentDate={currentDate}/>);
 }
 
-
 const Month = props => {
     const {date} = props;
     const className = classNames(styles.box, styles.dayName);

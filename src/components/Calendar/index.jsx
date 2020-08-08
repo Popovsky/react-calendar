@@ -8,7 +8,7 @@ const Calendar = ({currentDate}) => {
     return (
         <article className={styles.container}>
             <Day currentDate={currentDate}/>
-            <Month date={new Date(2020, 7, 7)} currentDate={currentDate}/>
+            <Month date={currentDate} currentDate={currentDate}/>
         </article>
     );
 }
